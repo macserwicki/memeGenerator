@@ -32,17 +32,6 @@
                                     <action selector="addMemeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GaN-Fq-JH0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KM3-eD-D8Y">
-                                <rect key="frame" x="270" y="540" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="EZr-se-h2T"/>
-                                    <constraint firstAttribute="width" constant="60" id="Lh3-ya-r79"/>
-                                </constraints>
-                                <state key="normal" image="cancelpost_btn"/>
-                                <connections>
-                                    <action selector="cancelMemeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3C5-G8-C3n"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bA2-4W-9Fw">
                                 <rect key="frame" x="35" y="35" width="530" height="403"/>
                                 <subviews>
@@ -144,11 +133,50 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="QFx-ZA-bcs">
+                                <rect key="frame" x="265" y="457" width="70" height="75"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-16" translatesAutoresizingMaskIntoConstraints="NO" id="SCT-vF-nVr">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="75"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Done" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gg3-LW-aD1">
+                                                <rect key="frame" x="15" y="0.0" width="41" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeF-OX-jSy">
+                                                <rect key="frame" x="0.0" y="5" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="7Yx-UC-sqf"/>
+                                                    <constraint firstAttribute="width" constant="70" id="GRf-N1-AJA"/>
+                                                </constraints>
+                                                <state key="normal" image="download_snap"/>
+                                                <connections>
+                                                    <action selector="doneButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hmP-6R-E14"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KM3-eD-D8Y">
+                                <rect key="frame" x="280" y="560" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="EZr-se-h2T"/>
+                                    <constraint firstAttribute="width" constant="40" id="Lh3-ya-r79"/>
+                                </constraints>
+                                <state key="normal" image="cancelpost_btn"/>
+                                <connections>
+                                    <action selector="cancelMemeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3C5-G8-C3n"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QKN-Cu-IMG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3bx-JA-pCV"/>
                             <constraint firstItem="QKN-Cu-IMG" firstAttribute="top" secondItem="Huw-am-Q7S" secondAttribute="bottom" constant="12" id="3cW-Fl-hxz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QFx-ZA-bcs" secondAttribute="bottom" constant="50" id="4Vh-gM-R76"/>
                             <constraint firstItem="Huw-am-Q7S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="88t-aj-snv"/>
                             <constraint firstItem="QKN-Cu-IMG" firstAttribute="top" secondItem="Huw-am-Q7S" secondAttribute="bottom" constant="15" id="8hk-jM-xJI"/>
                             <constraint firstItem="bA2-4W-9Fw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="8yG-ZE-5lh"/>
@@ -157,10 +185,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="0bP-4d-nBU" secondAttribute="trailing" constant="-20" id="DGr-kf-zY1"/>
                             <constraint firstItem="bA2-4W-9Fw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fdc-Xm-dY5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bA2-4W-9Fw" secondAttribute="trailing" constant="15" id="JfJ-c4-hSX"/>
+                            <constraint firstItem="QKN-Cu-IMG" firstAttribute="top" secondItem="QFx-ZA-bcs" secondAttribute="bottom" constant="6" id="MsP-iP-kIk"/>
                             <constraint firstItem="bA2-4W-9Fw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QWC-eo-rII"/>
                             <constraint firstItem="Huw-am-Q7S" firstAttribute="top" secondItem="bA2-4W-9Fw" secondAttribute="bottom" id="T4r-l1-nLZ"/>
                             <constraint firstItem="bA2-4W-9Fw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YU1-IW-IBQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KM3-eD-D8Y" secondAttribute="bottom" id="deo-y1-1bQ"/>
+                            <constraint firstItem="QFx-ZA-bcs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eC5-w6-uhl"/>
                             <constraint firstItem="QKN-Cu-IMG" firstAttribute="top" secondItem="bA2-4W-9Fw" secondAttribute="bottom" constant="100" id="ekT-gw-pz9"/>
                             <constraint firstItem="0bP-4d-nBU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="h2Y-RN-H37"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QKN-Cu-IMG" secondAttribute="bottom" id="iyn-Wr-XeT"/>
@@ -187,12 +217,14 @@
                                 <exclude reference="juX-i6-8uh"/>
                                 <exclude reference="8hk-jM-xJI"/>
                                 <exclude reference="kLr-qT-Roe"/>
+                                <exclude reference="4Vh-gM-R76"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="addMemeButtonOutlet" destination="QKN-Cu-IMG" id="vxB-YI-rqU"/>
                         <outlet property="cancelMemeButtonOutlet" destination="KM3-eD-D8Y" id="k9h-QU-t0q"/>
+                        <outlet property="doneStack" destination="QFx-ZA-bcs" id="TZ1-vd-UIg"/>
                         <outlet property="memeImageOutlet" destination="9ZP-tt-oHp" id="cvc-Db-0HI"/>
                         <outlet property="memeStack" destination="bA2-4W-9Fw" id="RsC-Bf-7o8"/>
                         <outlet property="photoStack" destination="Huw-am-Q7S" id="6eu-47-e5n"/>
@@ -209,6 +241,7 @@
         <image name="background_character" width="242" height="233"/>
         <image name="bg" width="375" height="667"/>
         <image name="cancelpost_btn" width="54" height="54"/>
+        <image name="download_snap" width="21" height="24"/>
         <image name="media_picture" width="96" height="96"/>
         <image name="record_camera" width="96" height="96"/>
     </resources>

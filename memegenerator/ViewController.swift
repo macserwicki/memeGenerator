@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var doneStack: UIStackView!
+    
     @IBOutlet weak var memeStack: UIStackView!
     @IBOutlet weak var photoStack: UIStackView!
     
@@ -21,13 +23,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func addMemeButtonAction(sender: UIButton) {
     photoStack.hidden = !photoStack
         .hidden
-    
-    memeStack.hidden = !memeStack.hidden
+
     }
     
     @IBAction func cancelMemeButtonAction(sender: UIButton) {
-        revertAll()
-        switchButtons()
+        displayAlert(title: "Reset Meme?", message: "Are you sure you would like to start over?")
     }
     let imagePicker = UIImagePickerController()
     
@@ -38,12 +38,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
             photoStack.hidden = true
             memeStack.hidden = true
+            doneStack.hidden = true
         
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     
@@ -51,6 +47,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.presentViewController(imagePicker, animated: true, completion: nil)
         imagePicker.allowsEditing = false
     }
+    
+    
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
@@ -75,28 +73,59 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func switchButtons() {
         addMemeButtonOutlet.hidden = !addMemeButtonOutlet.hidden
         cancelMemeButtonOutlet.hidden = !cancelMemeButtonOutlet.hidden
+        memeStack.hidden = !memeStack.hidden
+        doneStack.hidden = !doneStack.hidden
         photoStack.hidden = true
     }
     
     func revertAll() {
-        //TODO: Clear text, and image
-        memeImageOutlet.image = nil
-        
-            memeStack.hidden = true
+        doneStack.hidden = true
+        memeStack.hidden = true
+        addMemeButtonOutlet.hidden = false
+        cancelMemeButtonOutlet.hidden = true
+        photoStack.hidden = true
+
     }
 
     @IBAction func browsePhotos(sender: UIButton) {
         imagePickerFromAlbum()
-        photoStack.hidden = true
     }
 
     @IBAction func cameraPhoto(sender: UIButton) {
         imagePickerFromCamera()
-        photoStack.hidden = true
-      
-
+    }
+    
+    @IBAction func doneButtonPressed(sender: UIButton) {
+        //TODO: Share/Download Meme
     }
 
+    
+    func displayAlert(title title: String, message: String) -> Void {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+      
+            
+            alert.addAction((UIAlertAction(title: "Reset", style: .Default, handler: { (action) -> Void in
+                self.revertAll()
+                self.dismissViewControllerAnimated(true, completion: {
+                })
+        
+        })))
+        
+        
+        alert.addAction((UIAlertAction(title: "Don't Reset", style: .Default, handler: { (action) -> Void in
+            
+            self.dismissViewControllerAnimated(true, completion: nil)
+        })))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+        
+        
+    }
+
+    
+    
 }
 
 
