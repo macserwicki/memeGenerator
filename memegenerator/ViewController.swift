@@ -10,9 +10,11 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var topTextField: UITextField!
+    @IBOutlet weak var bottomTextField: UITextField!
+    
     @IBOutlet weak var doneStack: UIStackView!
     
-    @IBOutlet weak var memeStack: UIStackView!
     @IBOutlet weak var photoStack: UIStackView!
     
     @IBOutlet weak var cancelMemeButtonOutlet: UIButton!
@@ -33,26 +35,36 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Set Delegates
         imagePicker.delegate = self
+        
+        //UI Starting Point
         cancelMemeButtonOutlet.hidden = true
+        addMemeButtonOutlet.hidden = false
+        photoStack.hidden = true
+        hideMemeStack()
+        doneStack.hidden = true
         
-            photoStack.hidden = true
-            memeStack.hidden = true
-            doneStack.hidden = true
-        
+        //Set IMPACT Font
+        bottomTextField.defaultTextAttributes = memeTextAttributes
+        topTextField.defaultTextAttributes = memeTextAttributes
+        bottomTextField.textAlignment = NSTextAlignment.Center
+        topTextField.textAlignment = NSTextAlignment.Center
     }
 
     
     func presentImagePicker() {
         self.presentViewController(imagePicker, animated: true, completion: nil)
         imagePicker.allowsEditing = false
+        
     }
     
     
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            memeImageOutlet.contentMode = .ScaleAspectFit
+            memeImageOutlet.contentMode = .ScaleAspectFill
             memeImageOutlet.image = pickedImage
             switchButtons()
         }
@@ -73,14 +85,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func switchButtons() {
         addMemeButtonOutlet.hidden = !addMemeButtonOutlet.hidden
         cancelMemeButtonOutlet.hidden = !cancelMemeButtonOutlet.hidden
-        memeStack.hidden = !memeStack.hidden
+        switchMemeStack()
         doneStack.hidden = !doneStack.hidden
         photoStack.hidden = true
     }
     
     func revertAll() {
         doneStack.hidden = true
-        memeStack.hidden = true
+        hideMemeStack()
         addMemeButtonOutlet.hidden = false
         cancelMemeButtonOutlet.hidden = true
         photoStack.hidden = true
@@ -124,6 +136,31 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
 
+    func hideMemeStack() {
+        topTextField.hidden = true
+        bottomTextField.hidden = true
+        memeImageOutlet.hidden = true
+    }
+    
+    func unHideMemeStack() {
+        topTextField.hidden = !true
+        bottomTextField.hidden = !true
+        memeImageOutlet.hidden = !true
+    }
+    
+    func switchMemeStack() {
+            topTextField.hidden = !topTextField.hidden
+            bottomTextField.hidden = !bottomTextField.hidden
+            memeImageOutlet.hidden = !memeImageOutlet.hidden
+    }
+    
+    let memeTextAttributes = [
+        NSStrokeColorAttributeName : UIColor.blackColor(),
+        NSForegroundColorAttributeName : UIColor.whiteColor(),
+        NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+        NSStrokeWidthAttributeName : -5.0
+    ]
+    
     
     
 }

@@ -32,58 +32,39 @@
                                     <action selector="addMemeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GaN-Fq-JH0"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bA2-4W-9Fw">
-                                <rect key="frame" x="35" y="35" width="530" height="403"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Top" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pJN-hV-33c">
-                                        <rect key="frame" x="5" y="0.0" width="520" height="33"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="33" id="g1g-My-NrS"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_character" translatesAutoresizingMaskIntoConstraints="NO" id="9ZP-tt-oHp" customClass="MemeView" customModule="memegenerator" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="41" width="520" height="321"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="X3K-Zq-KxI"/>
-                                            <constraint firstAttribute="height" constant="128" id="ekI-P5-gVe"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="X3K-Zq-KxI"/>
-                                                <exclude reference="ekI-P5-gVe"/>
-                                            </mask>
-                                        </variation>
-                                    </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bottom" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="J4A-HL-zDd">
-                                        <rect key="frame" x="5" y="370" width="520" height="33"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="33" id="zF4-ly-2wP"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download_snap" translatesAutoresizingMaskIntoConstraints="NO" id="9ZP-tt-oHp" customClass="MemeView" customModule="memegenerator" customModuleProvider="target">
+                                <rect key="frame" x="35" y="28" width="530" height="400"/>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="9ZP-tt-oHp" secondAttribute="trailing" constant="8" id="9pv-wU-kYC"/>
-                                    <constraint firstItem="9ZP-tt-oHp" firstAttribute="top" secondItem="pJN-hV-33c" secondAttribute="bottom" constant="8" id="Tun-BU-2sR"/>
-                                    <constraint firstItem="pJN-hV-33c" firstAttribute="leading" secondItem="bA2-4W-9Fw" secondAttribute="leading" constant="5" id="VNP-4p-xDA"/>
-                                    <constraint firstItem="J4A-HL-zDd" firstAttribute="top" secondItem="9ZP-tt-oHp" secondAttribute="bottom" constant="8" id="VPo-Gi-SUC"/>
-                                    <constraint firstItem="J4A-HL-zDd" firstAttribute="leading" secondItem="bA2-4W-9Fw" secondAttribute="leading" constant="5" id="dN0-39-nYH"/>
-                                    <constraint firstAttribute="trailing" secondItem="9ZP-tt-oHp" secondAttribute="trailing" constant="5" id="hQD-AL-yL6"/>
-                                    <constraint firstAttribute="trailing" secondItem="pJN-hV-33c" secondAttribute="trailing" constant="5" id="iSF-3v-0Dj"/>
-                                    <constraint firstItem="9ZP-tt-oHp" firstAttribute="leading" secondItem="bA2-4W-9Fw" secondAttribute="leading" constant="5" id="kWJ-V3-QGC"/>
-                                    <constraint firstItem="9ZP-tt-oHp" firstAttribute="leading" secondItem="bA2-4W-9Fw" secondAttribute="leading" constant="8" id="klN-wm-WOd"/>
-                                    <constraint firstAttribute="trailing" secondItem="J4A-HL-zDd" secondAttribute="trailing" constant="5" id="nGC-HM-oYi"/>
+                                    <constraint firstAttribute="width" constant="240" id="X3K-Zq-KxI"/>
+                                    <constraint firstAttribute="height" constant="128" id="ekI-P5-gVe"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="9pv-wU-kYC"/>
-                                        <exclude reference="klN-wm-WOd"/>
+                                        <exclude reference="X3K-Zq-KxI"/>
+                                        <exclude reference="ekI-P5-gVe"/>
                                     </mask>
                                 </variation>
-                            </stackView>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KM3-eD-D8Y">
+                                <rect key="frame" x="280" y="560" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="EZr-se-h2T"/>
+                                    <constraint firstAttribute="width" constant="40" id="Lh3-ya-r79"/>
+                                </constraints>
+                                <state key="normal" image="cancelpost_btn"/>
+                                <connections>
+                                    <action selector="cancelMemeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3C5-G8-C3n"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Top" placeholder="Top" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pJN-hV-33c">
+                                <rect key="frame" x="35" y="28" width="530" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="g1g-My-NrS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Huw-am-Q7S">
                                 <rect key="frame" x="230" y="451" width="140" height="75"/>
                                 <subviews>
@@ -133,8 +114,16 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bottom" placeholder="Bottom" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="J4A-HL-zDd">
+                                <rect key="frame" x="35" y="395" width="530" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="zF4-ly-2wP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="QFx-ZA-bcs">
-                                <rect key="frame" x="265" y="457" width="70" height="75"/>
+                                <rect key="frame" x="265" y="475" width="70" height="75"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-16" translatesAutoresizingMaskIntoConstraints="NO" id="SCT-vF-nVr">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="75"/>
@@ -160,42 +149,29 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KM3-eD-D8Y">
-                                <rect key="frame" x="280" y="560" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="EZr-se-h2T"/>
-                                    <constraint firstAttribute="width" constant="40" id="Lh3-ya-r79"/>
-                                </constraints>
-                                <state key="normal" image="cancelpost_btn"/>
-                                <connections>
-                                    <action selector="cancelMemeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3C5-G8-C3n"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="QKN-Cu-IMG" firstAttribute="top" secondItem="9ZP-tt-oHp" secondAttribute="bottom" constant="110" id="1br-ou-BJs"/>
                             <constraint firstItem="QKN-Cu-IMG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3bx-JA-pCV"/>
                             <constraint firstItem="QKN-Cu-IMG" firstAttribute="top" secondItem="Huw-am-Q7S" secondAttribute="bottom" constant="12" id="3cW-Fl-hxz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QFx-ZA-bcs" secondAttribute="bottom" constant="50" id="4Vh-gM-R76"/>
+                            <constraint firstItem="pJN-hV-33c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="4nN-KW-a4C"/>
                             <constraint firstItem="Huw-am-Q7S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="88t-aj-snv"/>
                             <constraint firstItem="QKN-Cu-IMG" firstAttribute="top" secondItem="Huw-am-Q7S" secondAttribute="bottom" constant="15" id="8hk-jM-xJI"/>
-                            <constraint firstItem="bA2-4W-9Fw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="8yG-ZE-5lh"/>
-                            <constraint firstItem="bA2-4W-9Fw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="9qR-AZ-yEf"/>
-                            <constraint firstItem="Huw-am-Q7S" firstAttribute="top" secondItem="bA2-4W-9Fw" secondAttribute="bottom" constant="8" id="BZ2-Ue-anE"/>
+                            <constraint firstItem="QKN-Cu-IMG" firstAttribute="top" secondItem="J4A-HL-zDd" secondAttribute="bottom" constant="110" id="BAJ-tY-ZP1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0bP-4d-nBU" secondAttribute="trailing" constant="-20" id="DGr-kf-zY1"/>
-                            <constraint firstItem="bA2-4W-9Fw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fdc-Xm-dY5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bA2-4W-9Fw" secondAttribute="trailing" constant="15" id="JfJ-c4-hSX"/>
-                            <constraint firstItem="QKN-Cu-IMG" firstAttribute="top" secondItem="QFx-ZA-bcs" secondAttribute="bottom" constant="6" id="MsP-iP-kIk"/>
-                            <constraint firstItem="bA2-4W-9Fw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QWC-eo-rII"/>
-                            <constraint firstItem="Huw-am-Q7S" firstAttribute="top" secondItem="bA2-4W-9Fw" secondAttribute="bottom" id="T4r-l1-nLZ"/>
-                            <constraint firstItem="bA2-4W-9Fw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YU1-IW-IBQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9ZP-tt-oHp" secondAttribute="trailing" constant="15" id="DOm-km-Qar"/>
+                            <constraint firstItem="QKN-Cu-IMG" firstAttribute="top" secondItem="QFx-ZA-bcs" secondAttribute="bottom" constant="-12" id="MsP-iP-kIk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J4A-HL-zDd" secondAttribute="trailing" constant="15" id="TCs-dB-WyX"/>
+                            <constraint firstItem="pJN-hV-33c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="TPV-Ky-yvG"/>
+                            <constraint firstItem="J4A-HL-zDd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="TpX-fI-dIJ"/>
+                            <constraint firstItem="9ZP-tt-oHp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="Tzu-x4-wwp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pJN-hV-33c" secondAttribute="trailing" constant="15" id="d2C-91-A2m"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KM3-eD-D8Y" secondAttribute="bottom" id="deo-y1-1bQ"/>
                             <constraint firstItem="QFx-ZA-bcs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eC5-w6-uhl"/>
-                            <constraint firstItem="QKN-Cu-IMG" firstAttribute="top" secondItem="bA2-4W-9Fw" secondAttribute="bottom" constant="100" id="ekT-gw-pz9"/>
                             <constraint firstItem="0bP-4d-nBU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="h2Y-RN-H37"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QKN-Cu-IMG" secondAttribute="bottom" id="iyn-Wr-XeT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bA2-4W-9Fw" secondAttribute="trailing" id="jEf-ht-tQ9"/>
-                            <constraint firstItem="Huw-am-Q7S" firstAttribute="top" secondItem="bA2-4W-9Fw" secondAttribute="bottom" constant="15" id="juX-i6-8uh"/>
                             <constraint firstItem="QKN-Cu-IMG" firstAttribute="top" secondItem="Huw-am-Q7S" secondAttribute="bottom" constant="33" id="kLr-qT-Roe"/>
                             <constraint firstItem="KM3-eD-D8Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kwy-Ci-Dsm"/>
                             <constraint firstItem="Huw-am-Q7S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n6N-RD-fVD"/>
@@ -203,18 +179,13 @@
                             <constraint firstItem="0bP-4d-nBU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="pMl-du-Ph5"/>
                             <constraint firstItem="0bP-4d-nBU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="pjF-TF-qva"/>
                             <constraint firstItem="Huw-am-Q7S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sXW-Vg-4mT"/>
-                            <constraint firstItem="bA2-4W-9Fw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="yc9-ll-30j"/>
+                            <constraint firstItem="pJN-hV-33c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sd9-Qh-wEa"/>
+                            <constraint firstItem="9ZP-tt-oHp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="zLu-Xu-mFt"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="pjF-TF-qva"/>
-                                <exclude reference="8yG-ZE-5lh"/>
-                                <exclude reference="QWC-eo-rII"/>
-                                <exclude reference="jEf-ht-tQ9"/>
                                 <exclude reference="88t-aj-snv"/>
-                                <exclude reference="BZ2-Ue-anE"/>
-                                <exclude reference="T4r-l1-nLZ"/>
-                                <exclude reference="juX-i6-8uh"/>
                                 <exclude reference="8hk-jM-xJI"/>
                                 <exclude reference="kLr-qT-Roe"/>
                                 <exclude reference="4Vh-gM-R76"/>
@@ -223,11 +194,12 @@
                     </view>
                     <connections>
                         <outlet property="addMemeButtonOutlet" destination="QKN-Cu-IMG" id="vxB-YI-rqU"/>
+                        <outlet property="bottomTextField" destination="J4A-HL-zDd" id="Vbr-H5-KU3"/>
                         <outlet property="cancelMemeButtonOutlet" destination="KM3-eD-D8Y" id="k9h-QU-t0q"/>
                         <outlet property="doneStack" destination="QFx-ZA-bcs" id="TZ1-vd-UIg"/>
                         <outlet property="memeImageOutlet" destination="9ZP-tt-oHp" id="cvc-Db-0HI"/>
-                        <outlet property="memeStack" destination="bA2-4W-9Fw" id="RsC-Bf-7o8"/>
                         <outlet property="photoStack" destination="Huw-am-Q7S" id="6eu-47-e5n"/>
+                        <outlet property="topTextField" destination="pJN-hV-33c" id="oHC-MI-p4o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -238,7 +210,6 @@
     </scenes>
     <resources>
         <image name="add_new_post_btn" width="75" height="62"/>
-        <image name="background_character" width="242" height="233"/>
         <image name="bg" width="375" height="667"/>
         <image name="cancelpost_btn" width="54" height="54"/>
         <image name="download_snap" width="21" height="24"/>
