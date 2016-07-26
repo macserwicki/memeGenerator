@@ -19,7 +19,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var photoStack: UIStackView!
     
     @IBOutlet weak var cancelMemeButtonOutlet: UIButton!
-    @IBOutlet weak var memeImageOutlet: MemeView!
+    @IBOutlet weak var memeImageOutlet: UIImageView!
     
     @IBOutlet weak var addMemeButtonOutlet: UIButton!
     
@@ -110,12 +110,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func doneButtonPressed(sender: UIButton) {
         //TODO: Share/Download Meme
-        if let image = saveMeme() {
+            saveMeme()
 
             revertAll()
-            memeImageOutlet.image = nil
+            memeImageOutlet.hidden = false
+            memeImageOutlet.image = UIImage(named: "background_character")
        
-        }
+        
     }
 
     
