@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBOutlet weak var imgViewTest: UIImageView!
 
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
@@ -64,7 +65,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            memeImageOutlet.contentMode = .ScaleAspectFill
+          
             memeImageOutlet.image = pickedImage
             switchButtons()
         }
@@ -109,6 +110,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func doneButtonPressed(sender: UIButton) {
         //TODO: Share/Download Meme
+        if let image = saveMeme() {
+
+            revertAll()
+            memeImageOutlet.image = nil
+       
+        }
     }
 
     
@@ -161,7 +168,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NSStrokeWidthAttributeName : -5.0
     ]
     
-    
+ 
+    func saveMeme() -> UIImage? {
+        // make new meme
+        if (topTextField.text != nil) && (bottomTextField.text != nil) && (memeImageOutlet.image != nil) {
+            
+             let meme = MemeObject(topText: topTextField.text!, bottomText: bottomTextField.text!, image: memeImageOutlet.image!)
+            
+            memeImageOutlet.addSubview(bottomTextField)
+            memeImageOutlet.addSubview(topTextField)
+           let meme2 = UIImage(view: memeImageOutlet)
+           self.view.addSubview(bottomTextField)
+            self.view.addSubview(topTextField)
+
+            
+           UIImageWriteToSavedPhotosAlbum(meme2, nil, nil, nil)
+            
+            return meme2
+    }
+        return nil
+    }
     
 }
 

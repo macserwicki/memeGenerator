@@ -21,23 +21,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="0bP-4d-nBU">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKN-Cu-IMG">
-                                <rect key="frame" x="263" y="538" width="75" height="62"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="8bM-ZN-o2C"/>
-                                    <constraint firstAttribute="height" constant="62" id="jwa-wR-frk"/>
-                                </constraints>
-                                <state key="normal" image="add_new_post_btn"/>
-                                <connections>
-                                    <action selector="addMemeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GaN-Fq-JH0"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download_snap" translatesAutoresizingMaskIntoConstraints="NO" id="9ZP-tt-oHp" customClass="MemeView" customModule="memegenerator" customModuleProvider="target">
-                                <rect key="frame" x="35" y="28" width="530" height="400"/>
-                                <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="200" y="225" width="200" height="150"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Hzq-Gl-Wz0"/>
                                     <constraint firstAttribute="width" constant="240" id="X3K-Zq-KxI"/>
                                     <constraint firstAttribute="height" constant="128" id="ekI-P5-gVe"/>
+                                    <constraint firstAttribute="height" constant="150" id="l0o-nu-uRh"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -58,7 +48,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Top" placeholder="Top" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pJN-hV-33c">
-                                <rect key="frame" x="35" y="28" width="530" height="33"/>
+                                <rect key="frame" x="35" y="242" width="530" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="g1g-My-NrS"/>
                                 </constraints>
@@ -114,14 +104,6 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bottom" placeholder="Bottom" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="J4A-HL-zDd">
-                                <rect key="frame" x="35" y="395" width="530" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="zF4-ly-2wP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                            </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="QFx-ZA-bcs">
                                 <rect key="frame" x="265" y="475" width="70" height="75"/>
                                 <subviews>
@@ -149,6 +131,25 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKN-Cu-IMG">
+                                <rect key="frame" x="263" y="538" width="75" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="8bM-ZN-o2C"/>
+                                    <constraint firstAttribute="height" constant="62" id="jwa-wR-frk"/>
+                                </constraints>
+                                <state key="normal" image="add_new_post_btn"/>
+                                <connections>
+                                    <action selector="addMemeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GaN-Fq-JH0"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bottom" placeholder="Bottom" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="J4A-HL-zDd">
+                                <rect key="frame" x="35" y="325" width="530" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="zF4-ly-2wP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -159,17 +160,21 @@
                             <constraint firstItem="pJN-hV-33c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="4nN-KW-a4C"/>
                             <constraint firstItem="Huw-am-Q7S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="88t-aj-snv"/>
                             <constraint firstItem="QKN-Cu-IMG" firstAttribute="top" secondItem="Huw-am-Q7S" secondAttribute="bottom" constant="15" id="8hk-jM-xJI"/>
+                            <constraint firstItem="J4A-HL-zDd" firstAttribute="top" secondItem="9ZP-tt-oHp" secondAttribute="bottom" constant="-50" id="9nl-Wg-42m"/>
                             <constraint firstItem="QKN-Cu-IMG" firstAttribute="top" secondItem="J4A-HL-zDd" secondAttribute="bottom" constant="110" id="BAJ-tY-ZP1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0bP-4d-nBU" secondAttribute="trailing" constant="-20" id="DGr-kf-zY1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9ZP-tt-oHp" secondAttribute="trailing" constant="15" id="DOm-km-Qar"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9ZP-tt-oHp" secondAttribute="trailing" id="DOm-km-Qar"/>
+                            <constraint firstItem="9ZP-tt-oHp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E6g-xC-nLT"/>
                             <constraint firstItem="QKN-Cu-IMG" firstAttribute="top" secondItem="QFx-ZA-bcs" secondAttribute="bottom" constant="-12" id="MsP-iP-kIk"/>
+                            <constraint firstItem="9ZP-tt-oHp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RA4-p2-LOb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="J4A-HL-zDd" secondAttribute="trailing" constant="15" id="TCs-dB-WyX"/>
                             <constraint firstItem="pJN-hV-33c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="TPV-Ky-yvG"/>
                             <constraint firstItem="J4A-HL-zDd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="TpX-fI-dIJ"/>
-                            <constraint firstItem="9ZP-tt-oHp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="Tzu-x4-wwp"/>
+                            <constraint firstItem="9ZP-tt-oHp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Tzu-x4-wwp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pJN-hV-33c" secondAttribute="trailing" constant="15" id="d2C-91-A2m"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KM3-eD-D8Y" secondAttribute="bottom" id="deo-y1-1bQ"/>
                             <constraint firstItem="QFx-ZA-bcs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eC5-w6-uhl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9ZP-tt-oHp" secondAttribute="bottom" constant="150" id="fKi-lv-3aD"/>
                             <constraint firstItem="0bP-4d-nBU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="h2Y-RN-H37"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QKN-Cu-IMG" secondAttribute="bottom" id="iyn-Wr-XeT"/>
                             <constraint firstItem="QKN-Cu-IMG" firstAttribute="top" secondItem="Huw-am-Q7S" secondAttribute="bottom" constant="33" id="kLr-qT-Roe"/>
@@ -180,15 +185,23 @@
                             <constraint firstItem="0bP-4d-nBU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="pjF-TF-qva"/>
                             <constraint firstItem="Huw-am-Q7S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sXW-Vg-4mT"/>
                             <constraint firstItem="pJN-hV-33c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sd9-Qh-wEa"/>
+                            <constraint firstItem="9ZP-tt-oHp" firstAttribute="top" secondItem="pJN-hV-33c" secondAttribute="bottom" constant="-50" id="yEB-Qk-99u"/>
                             <constraint firstItem="9ZP-tt-oHp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="zLu-Xu-mFt"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="pjF-TF-qva"/>
+                                <exclude reference="4nN-KW-a4C"/>
+                                <exclude reference="DOm-km-Qar"/>
+                                <exclude reference="Tzu-x4-wwp"/>
+                                <exclude reference="zLu-Xu-mFt"/>
                                 <exclude reference="88t-aj-snv"/>
+                                <exclude reference="1br-ou-BJs"/>
                                 <exclude reference="8hk-jM-xJI"/>
+                                <exclude reference="BAJ-tY-ZP1"/>
                                 <exclude reference="kLr-qT-Roe"/>
                                 <exclude reference="4Vh-gM-R76"/>
+                                <exclude reference="fKi-lv-3aD"/>
                             </mask>
                         </variation>
                     </view>
